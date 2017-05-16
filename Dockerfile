@@ -1,5 +1,5 @@
-# Init Example Database World on PostgreSQL 9.5
-FROM postgres:9.5
+# Init Example Database World on PostgreSQL 9.6
+FROM postgres:9.6
 
 ENV POSTGRES_USER world
 ENV POSTGRES_PASSWORD world123
