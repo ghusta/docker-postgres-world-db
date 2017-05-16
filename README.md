@@ -1,4 +1,4 @@
-# docker-postgres-world-db
+# postgres-world-db
 
 Example Database for [PostgreSQL](https://www.postgresql.org/) : World DB
 
@@ -6,26 +6,26 @@ Database script downloaded at : http://pgfoundry.org/frs/?group_id=1000150&relea
 
 See also PostgreSQL [Sample Databases](https://wiki.postgresql.org/wiki/Sample_Databases).
 
-## Database details
+# Database details
 
-### Default parameters
+## Default parameters
 
 - database : world-db
 - user : world
 - password : world123
 
-### Schema
+## Schema
 
 - public
 
-### Tables
+## Tables
 This database contains 3 tables :
 
 - city
 - country
 - countrylanguage
 
-### Relationships
+## Relationships
 
 - countrylanguage -> country (countrylanguage_countrycode_fkey)
 - country -> city (country_capital_fkey)
@@ -35,3 +35,7 @@ This database contains 3 tables :
 You can launch this docker image like this :
 
 `docker run -d -pxxxx:5432 ghusta/postgres-world-db`
+
+# Alternatives
+
+You can find alternative DBMS or databases examples [at this page](ALTERNATIVES.md).
