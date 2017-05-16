@@ -10,7 +10,8 @@ You can found the MySQL version of World database [here](https://dev.mysql.com/d
 
 ### Sakila
  
-Another popular sample database is the **Sakila** database.
+Another popular sample database is the **Sakila** database.  
+The Sakila sample database is designed to represent a DVD rental store.
 
 You can found information about the [MySQL version](https://dev.mysql.com/doc/sakila/en/).
 
