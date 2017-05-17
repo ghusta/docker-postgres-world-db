@@ -12,7 +12,7 @@ SET client_encoding = 'LATIN1';
 CREATE TABLE city (
     id integer NOT NULL,
     name text NOT NULL,
-    countrycode character(3) NOT NULL,
+    country_code character(3) NOT NULL,
     district text NOT NULL,
     population integer NOT NULL
 );
@@ -22,28 +22,28 @@ CREATE TABLE country (
     name text NOT NULL,
     continent text NOT NULL,
     region text NOT NULL,
-    surfacearea real NOT NULL,
-    indepyear smallint,
+    surface_area real NOT NULL,
+    indep_year smallint,
     population integer NOT NULL,
-    lifeexpectancy real,
+    life_expectancy real,
     gnp numeric(10,2),
-    gnpold numeric(10,2),
-    localname text NOT NULL,
-    governmentform text NOT NULL,
-    headofstate text,
+    gnp_old numeric(10,2),
+    local_name text NOT NULL,
+    government_form text NOT NULL,
+    head_of_state text,
     capital integer,
     code2 character(2) NOT NULL,
     CONSTRAINT country_continent_check CHECK ((((((((continent = 'Asia'::text) OR (continent = 'Europe'::text)) OR (continent = 'North America'::text)) OR (continent = 'Africa'::text)) OR (continent = 'Oceania'::text)) OR (continent = 'Antarctica'::text)) OR (continent = 'South America'::text)))
 );
 
-CREATE TABLE countrylanguage (
-    countrycode character(3) NOT NULL,
+CREATE TABLE country_language (
+    country_code character(3) NOT NULL,
     "language" text NOT NULL,
-    isofficial boolean NOT NULL,
+    is_official boolean NOT NULL,
     percentage real NOT NULL
 );
 
-COPY city (id, name, countrycode, district, population) FROM stdin;
+COPY city (id, name, country_code, district, population) FROM stdin;
 1	Kabul	AFG	Kabol	1780000
 2	Qandahar	AFG	Qandahar	237500
 3	Herat	AFG	Herat	186800
@@ -4130,7 +4130,7 @@ COPY city (id, name, countrycode, district, population) FROM stdin;
 -- Data for Name: country; Type: TABLE DATA; Schema: public; Owner: chriskl
 --
 
-COPY country (code, name, continent, region, surfacearea, indepyear, population, lifeexpectancy, gnp, gnpold, localname, governmentform, headofstate, capital, code2) FROM stdin;
+COPY country (code, name, continent, region, surface_area, indep_year, population, life_expectancy, gnp, gnp_old, local_name, government_form, head_of_state, capital, code2) FROM stdin;
 AFG	Afghanistan	Asia	Southern and Central Asia	652090	1919	22720000	45.900002	5976.00	\N	Afganistan/Afqanestan	Islamic Emirate	Mohammad Omar	1	AF
 NLD	Netherlands	Europe	Western Europe	41526	1581	15864000	78.300003	371362.00	360478.00	Nederland	Constitutional Monarchy	Beatrix	5	NL
 ANT	Netherlands Antilles	North America	Caribbean	800	\N	217000	74.699997	1941.00	\N	Nederlandse Antillen	Nonmetropolitan Territory of The Netherlands	Beatrix	33	AN
@@ -4374,10 +4374,10 @@ UMI	United States Minor Outlying Islands	Oceania	Micronesia/Caribbean	16	\N	0	\N
 
 
 --
--- Data for Name: countrylanguage; Type: TABLE DATA; Schema: public; Owner: chriskl
+-- Data for Name: country_language; Type: TABLE DATA; Schema: public; Owner: chriskl
 --
 
-COPY countrylanguage (countrycode, "language", isofficial, percentage) FROM stdin;
+COPY country_language (country_code, "language", is_official, percentage) FROM stdin;
 AFG	Pashto	t	52.400002
 NLD	Dutch	t	95.599998
 ANT	Papiamento	t	86.199997
@@ -5371,18 +5371,20 @@ ALTER TABLE ONLY city
 ALTER TABLE ONLY country
     ADD CONSTRAINT country_pkey PRIMARY KEY (code);
 
-ALTER TABLE ONLY countrylanguage
-    ADD CONSTRAINT countrylanguage_pkey PRIMARY KEY (countrycode, "language");
+ALTER TABLE ONLY country_language
+    ADD CONSTRAINT country_language_pkey PRIMARY KEY (country_code, "language");
 
 ALTER TABLE ONLY country
     ADD CONSTRAINT country_capital_fkey FOREIGN KEY (capital) REFERENCES city(id);
 
-ALTER TABLE ONLY countrylanguage
-    ADD CONSTRAINT countrylanguage_countrycode_fkey FOREIGN KEY (countrycode) REFERENCES country(code);
+ALTER TABLE ONLY country_language
+    ADD CONSTRAINT country_language_country_code_fkey FOREIGN KEY (country_code) REFERENCES country(code);
+
+COMMENT ON COLUMN country.gnp IS 'GNP is Gross national product';
 
 COMMIT;
 
 ANALYZE city;
 ANALYZE country;
-ANALYZE countrylanguage;
+ANALYZE country_language;
 

@@ -8,6 +8,9 @@ See also PostgreSQL [Sample Databases](https://wiki.postgresql.org/wiki/Sample_D
 
 # Database details
 
+**Important note** : from version 2.0, tables and columns names use _camel case_.
+ This version is incompatible with version 1.x.
+
 ## Default parameters
 
 - database : world-db
@@ -23,11 +26,11 @@ This database contains 3 tables :
 
 - city
 - country
-- countrylanguage
+- country_language
 
 ## Relationships
 
-- countrylanguage -> country (countrylanguage_countrycode_fkey)
+- country_language -> country (country_language_country_code_fkey)
 - country -> city (country_capital_fkey)
 
 # Docker
