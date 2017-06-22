@@ -5380,6 +5380,11 @@ ALTER TABLE ONLY country
 ALTER TABLE ONLY country_language
     ADD CONSTRAINT country_language_country_code_fkey FOREIGN KEY (country_code) REFERENCES country(code);
 
+-- Added in 2.1
+ALTER TABLE city
+    ADD CONSTRAINT country_fk
+    FOREIGN KEY (country_code) REFERENCES country (code);
+
 COMMENT ON COLUMN country.gnp IS 'GNP is Gross national product';
 
 COMMIT;

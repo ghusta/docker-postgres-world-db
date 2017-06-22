@@ -5,7 +5,7 @@ ENV POSTGRES_USER world
 ENV POSTGRES_PASSWORD world123
 ENV POSTGRES_DB world-db
 
-ADD ./world-2.0.tar.gz /scripts/world/
+ADD ./world-2.1.tar.gz /scripts/world/
 #ADD scripts/*.sql /docker-entrypoint-initdb.d/
 
 # Copier les scripts d'init dans : 
