@@ -1,7 +1,8 @@
 # Change Log
 
-## 2.2 (2017-10-05)
-Upgrade to PostgreSQL 10
+## 2.2 (2017-10-06)
+Upgrade to PostgreSQL 10.  
+See https://www.postgresql.org/about/news/1786/ 
 
 ## 2.1.1 (2017-10-05)
 Simplify Dockerfile (no need for zipped SQL scripts)
