@@ -1,5 +1,8 @@
 # Change Log
 
+# 2.1-alpine (2017-10-06)
+Uses postgres alpine image
+
 ## 2.1.1 (2017-10-05)
 Simplify Dockerfile (no need for zipped SQL scripts)
 
