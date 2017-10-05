@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.1.1 (2017-10-05)
+Simplify Dockerfile (no need for zipped SQL scripts)
+
 ## 2.1 (2016-06-22)
 Add _country_fk_ (city.country_code -> country.code)
 
