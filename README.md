@@ -1,5 +1,7 @@
 # postgres-world-db
 
+[![Build Status](https://travis-ci.org/ghusta/docker-postgres-world-db.svg?branch=master)](https://travis-ci.org/ghusta/docker-postgres-world-db)
+
 Example Database for [PostgreSQL](https://www.postgresql.org/) : World DB
 
 Database script downloaded at : http://pgfoundry.org/frs/?group_id=1000150&release_id=366#world-world-1.0-title-content

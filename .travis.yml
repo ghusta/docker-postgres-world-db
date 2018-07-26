@@ -1,0 +1,15 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker --version
+
+install:
+
+script:
+  - docker build --tag ghusta/postgres-world-db .
+
+after_success:
+  - docker image ls
