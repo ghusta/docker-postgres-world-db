@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.2.1 (2018-08-13)
+Add HEALTHCHECK in Dockerfile (#2).
+
 ## 2.2 (2017-10-06)
 Upgrade to PostgreSQL 10.  
 See https://www.postgresql.org/about/news/1786/ 
