@@ -1,6 +1,7 @@
 # postgres-world-db
 
 [![Build Status](https://travis-ci.org/ghusta/docker-postgres-world-db.svg?branch=master)](https://travis-ci.org/ghusta/docker-postgres-world-db)
+[![Docker Pulls](https://img.shields.io/docker/pulls/ghusta/postgres-world-db.svg)](https://hub.docker.com/r/ghusta/postgres-world-db)
 
 Example Database for [PostgreSQL](https://www.postgresql.org/) : World DB
 
