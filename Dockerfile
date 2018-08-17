@@ -12,5 +12,6 @@ ADD scripts/*.sql /docker-entrypoint-initdb.d/
 #ADD scripts/*.sh /docker-entrypoint-initdb.d/
 
 COPY docker-healthcheck /usr/local/bin/
+RUN chmod +x /usr/local/bin/docker-healthcheck
 
 HEALTHCHECK CMD ["docker-healthcheck"]
