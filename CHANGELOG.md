@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.2.1-alpine (2019-03-01)
+Add HEALTHCHECK in Dockerfile (#2).
+
 ## 2.2-alpine (2017-10-06)
 Upgrade to PostgreSQL 10.  
 See https://www.postgresql.org/about/news/1786/ 
