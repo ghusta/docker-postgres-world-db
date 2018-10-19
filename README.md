@@ -1,5 +1,9 @@
 # postgres-world-db
 
+[![Build Status](https://travis-ci.org/ghusta/docker-postgres-world-db.svg?branch=master)](https://travis-ci.org/ghusta/docker-postgres-world-db)
+[![Docker Pulls](https://img.shields.io/docker/pulls/ghusta/postgres-world-db.svg)](https://hub.docker.com/r/ghusta/postgres-world-db)
+![GitHub tag](https://img.shields.io/github/tag/ghusta/docker-postgres-world-db.svg)
+
 Example Database for [PostgreSQL](https://www.postgresql.org/) : World DB
 
 Database script downloaded at : http://pgfoundry.org/frs/?group_id=1000150&release_id=366#world-world-1.0-title-content
@@ -37,7 +41,7 @@ This database contains 3 tables :
 
 You can launch this docker image like this :
 
-`docker run -d -pxxxx:5432 ghusta/postgres-world-db:2.2-alpine`
+`docker run -d -pxxxx:5432 ghusta/postgres-world-db:2.3-alpine`
 
 # Alternatives
 
