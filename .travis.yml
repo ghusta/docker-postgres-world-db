@@ -9,7 +9,7 @@ before_install:
 install:
 
 script:
-  - docker build --tag ghusta/postgres-world-db .
+  - docker build --pull --tag ghusta/postgres-world-db .
   - docker inspect --format="{{json .Config.Healthcheck}}" ghusta/postgres-world-db
 
 after_success:
