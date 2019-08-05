@@ -12,7 +12,7 @@ See also PostgreSQL [Sample Databases](https://wiki.postgresql.org/wiki/Sample_D
 
 # Database details
 
-**Important note** : from version 2.0, tables and columns names use _camel case_.
+**Important note** : from version 2.0, tables and columns names use [_snake case_](https://en.wikipedia.org/wiki/Snake_case).
  This version is incompatible with version 1.x.
 
 ## Default parameters
