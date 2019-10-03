@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4 (2019-10-03)
+Upgrade to PostgreSQL 12.  
+See https://www.postgresql.org/about/news/1976/
+
 ## 2.3 (2018-10-19)
 Upgrade to PostgreSQL 11.  
 See https://www.postgresql.org/about/news/1894/
