@@ -41,7 +41,7 @@ This database contains 3 tables :
 
 You can launch this docker image like this :
 
-`docker run -d -pxxxx:5432 ghusta/postgres-world-db:2.4`
+`docker run -d -p xxxx:5432 ghusta/postgres-world-db:2.4`
 
 # Alternatives
 
