@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.5 (2020-09-25)
+Upgrade to PostgreSQL 13.  
+See https://www.postgresql.org/about/news/2077/
+
 ## 2.4 (2019-10-03)
 Upgrade to PostgreSQL 12.  
 See https://www.postgresql.org/about/news/1976/
