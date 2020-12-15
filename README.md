@@ -35,6 +35,7 @@ This database contains 3 tables :
 ## Relationships
 
 - country_language -> country (country_language_country_code_fkey)
+- city -> country (country_fk)
 - country -> city (country_capital_fkey)
 
 # Docker
