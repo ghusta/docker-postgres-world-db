@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.6 (2021-10-01)
+Upgrade to PostgreSQL 14.  
+See https://www.postgresql.org/about/news/postgresql-14-released-2318/
+
 ## 2.5 (2020-09-25)
 Upgrade to PostgreSQL 13.  
 See https://www.postgresql.org/about/news/2077/
