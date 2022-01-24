@@ -44,6 +44,20 @@ You can launch this docker image like this :
 
 `docker run -d -p xxxx:5432 ghusta/postgres-world-db:2.6`
 
+# Test it
+
+## With Java
+
+### Spring Boot
+
+Initialize a [Spring Boot project](https://start.spring.io/) with dependencies _PostgreSQL Driver_ and _Spring Data JPA_.
+
+Add these properties in _application.properties_ :
+
+- `spring.datasource.url=jdbc:postgresql://localhost:5432/world-db`
+- `spring.datasource.username=world`
+- `spring.datasource.password=world123`
+
 # Alternatives
 
 You can find alternative DBMS or databases examples [at this page](ALTERNATIVES.md).
