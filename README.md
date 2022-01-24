@@ -58,6 +58,32 @@ Add these properties in _application.properties_ :
 - `spring.datasource.username=world`
 - `spring.datasource.password=world123`
 
+## With Python
+
+Install [psycopg](https://pypi.org/project/psycopg/), a PostgreSQL database adapter for Python.
+
+> pip install psycopg
+
+Then create a connection...
+
+```python
+import psycopg
+
+DB_HOST = "localhost"
+DB_PORT = "5432"
+DB_NAME = "world-db"
+DB_USER = "world"
+DB_PASS = "world123"
+
+with  psycopg.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST, port=DB_PORT) as conn:
+
+    with conn.cursor() as cur:
+        cur.execute("select count(*) from city")
+        row = cur.fetchone()
+        print('Count = ', row[0])
+
+```
+
 # Alternatives
 
 You can find alternative DBMS or databases examples [at this page](ALTERNATIVES.md).
