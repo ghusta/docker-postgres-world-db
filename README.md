@@ -99,6 +99,8 @@ Add these properties in _application.properties_ :
 - `spring.datasource.username=world`
 - `spring.datasource.password=world123`
 
+Then just add JPA entities for each table (City, Country), and interfaces for each DAO which extends `JpaRepository`.
+
 ## With Python
 
 Install [psycopg](https://pypi.org/project/psycopg/), a PostgreSQL database adapter for Python.
