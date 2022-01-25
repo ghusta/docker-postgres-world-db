@@ -48,6 +48,47 @@ You can launch this docker image like this :
 
 ## With Java
 
+### Plain Java with JDBC
+
+First add the [PostgreSQL JDBC Driver](https://jdbc.postgresql.org/), with Maven for example : [org.postgresql » postgresql](https://mvnrepository.com/artifact/org.postgresql/postgresql).
+
+Then execute a test query with :
+
+```java
+package org.example;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class JdbcDemo {
+
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:postgresql://localhost:5432/world-db";
+        String user = "world";
+        String password = "world123";
+
+        try (Connection conn = DriverManager.getConnection(jdbcUrl, user, password)) {
+            String query = "select count(*) from city";
+            try (Statement stmt = conn.createStatement()) {
+                ResultSet rs = stmt.executeQuery(query);
+                while (rs.next()) {
+                    int count = rs.getInt(1);
+                    System.out.println("Count = " + count);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+}
+```
+
 ### Spring Boot
 
 Initialize a [Spring Boot project](https://start.spring.io/) with dependencies _PostgreSQL Driver_ and _Spring Data JPA_.
