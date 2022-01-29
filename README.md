@@ -46,7 +46,7 @@ You can run a Docker container with this command (replace _xxxx_ by your local p
 
 # PostgreSQL configuration
 
-If you need to inspect the PostgreSQL server configuration, you can read this file : `/var/lib/posgtresql/data/postgresql.conf`.
+If you need to inspect the PostgreSQL server configuration, you can print this file : `/var/lib/posgtresql/data/postgresql.conf`.
 
 All settings are documented here : https://www.postgresql.org/docs/current/runtime-config.html
 
