@@ -44,6 +44,30 @@ You can launch this docker image like this :
 
 `docker run -d -p xxxx:5432 ghusta/postgres-world-db:2.6`
 
+# PostgreSQL configuration
+
+If you need to inspect the PostgreSQL server configuration, you can read this file : `/var/lib/posgtresql/data/postgresql.conf`.
+
+All settings are documented here : https://www.postgresql.org/docs/current/runtime-config.html
+
+With Docker, you can run :
+
+`docker exec <my-container-name> cat /var/lib/postgresql/data/postgresql.conf`
+
+## Log all statements
+
+To log all statements, you can activate this line in the configuration :
+
+`log_min_duration_statement = 0`
+
+## Log categories of statements
+
+You can also log only some categories of statements with `log_statement`.
+
+Valid values are `none, ddl, mod, all`. Default is `none`.
+
+See details : https://www.postgresql.org/docs/current/runtime-config-logging.html
+
 # Test it
 
 ## With Java
