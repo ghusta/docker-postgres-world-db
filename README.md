@@ -38,9 +38,9 @@ This database contains 3 tables :
 - city -> country (country_fk)
 - country -> city (country_capital_fkey)
 
-# Docker
+# Run a Docker container
 
-You can launch this docker image like this :
+You can run a Docker container with this command (replace _xxxx_ by your local port) :
 
 `docker run -d -p xxxx:5432 ghusta/postgres-world-db:2.6`
 
