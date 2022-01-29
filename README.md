@@ -91,7 +91,7 @@ public class JdbcDemo {
 
 ### Spring Boot
 
-Initialize a [Spring Boot project](https://start.spring.io/) with dependencies _PostgreSQL Driver_ and _Spring Data JPA_.
+Initialize a [Spring Boot project](https://start.spring.io/) with dependencies _PostgreSQL Driver_ and [_Spring Data JPA_](https://spring.io/projects/spring-data-jpa) (or [_Spring Data JDBC_](https://spring.io/projects/spring-data-jdbc) if you want to keep simple).
 
 Add these properties in _application.properties_ :
 
