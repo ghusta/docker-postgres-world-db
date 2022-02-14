@@ -1,4 +1,4 @@
-# Init Example Database World on PostgreSQL 11
+# Init Example Database World on PostgreSQL 12
 FROM postgres:12-alpine
 
 ENV POSTGRES_USER world
