@@ -70,6 +70,44 @@ See details : https://www.postgresql.org/docs/current/runtime-config-logging.htm
 
 # Test it
 
+## With the psql CLI command
+
+`docker run -it <container_name> psql -d world-db -U world`
+
+Then try a command, like :
+
+### List of relations
+
+```
+psql (14.2 (Debian 14.2-1.pgdg110+1))
+Type "help" for help.
+
+world-db=# \d
+             List of relations
+ Schema |       Name       | Type  | Owner
+--------+------------------+-------+-------
+ public | city             | table | world
+ public | country          | table | world
+ public | country_language | table | world
+(3 rows)
+```
+
+### A simple query
+
+```
+world-db=# select * from city limit 10;
+  1 | Kabul          | AFG          | Kabol         |    1780000
+  2 | Qandahar       | AFG          | Qandahar      |     237500
+  3 | Herat          | AFG          | Herat         |     186800
+  4 | Mazar-e-Sharif | AFG          | Balkh         |     127800
+  5 | Amsterdam      | NLD          | Noord-Holland |     731200
+  6 | Rotterdam      | NLD          | Zuid-Holland  |     593321
+  7 | Haag           | NLD          | Zuid-Holland  |     440900
+  8 | Utrecht        | NLD          | Utrecht       |     234323
+  9 | Eindhoven      | NLD          | Noord-Brabant |     201843
+ 10 | Tilburg        | NLD          | Noord-Brabant |     193238
+```
+
 ## With Java
 
 ### Plain Java with JDBC
