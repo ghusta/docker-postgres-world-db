@@ -92,6 +92,13 @@ world-db=# \d
 (3 rows)
 ```
 
+### Describe the city table
+
+```
+world-db=# \d+ city
+...
+```
+
 ### A simple query
 
 ```
