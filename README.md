@@ -72,7 +72,7 @@ See details : https://www.postgresql.org/docs/current/runtime-config-logging.htm
 
 ## With the psql CLI command
 
-`docker run -it <container_name> psql -d world-db -U world`
+`docker exec -it <container_name> psql -d world-db -U world`
 
 Then try a command, like :
 
