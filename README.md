@@ -92,6 +92,17 @@ world-db=# \d
 (3 rows)
 ```
 
+### List of schemas
+
+```
+world-db=# \dn
+List of schemas
+  Name  | Owner
+--------+-------
+ public | world
+(1 row)
+```
+
 ### Describe the city table
 
 ```
