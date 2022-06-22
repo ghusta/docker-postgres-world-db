@@ -1,5 +1,5 @@
 # Init Example Database World on PostgreSQL 14
-FROM postgres:14.3
+FROM postgres:14.4
 
 ENV POSTGRES_USER world
 ENV POSTGRES_PASSWORD world123
