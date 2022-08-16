@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.6.5 (2022-08-16)
+Upgrade to PostgreSQL 14.5.  
+See https://www.postgresql.org/about/news/postgresql-145-138-1212-1117-1022-and-15-beta-3-released-2496/
+
 ## 2.6.4 (2022-06-22)
 Upgrade to PostgreSQL 14.4.  
 See https://www.postgresql.org/about/news/postgresql-144-released-2470/
