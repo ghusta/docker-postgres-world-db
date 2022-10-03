@@ -55,5 +55,5 @@ jobs:
           load: true
           tags: ghusta/postgres-world-db:ci_${{ steps.now.outputs.timestamp }}
 
-      - name: List Docker images
+      - name: List Docker images (arch linux/amd64)
         run: docker image ls ghusta/*
