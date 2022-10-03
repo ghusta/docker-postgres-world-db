@@ -1,10 +1,13 @@
-name: Docker Image CI
+name: Build Docker Image
 
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+
+env:
+  ENABLE_QEMU: 1
 
 jobs:
 
@@ -13,6 +16,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ghusta/postgres-world-db:ci_$(date +%s)
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - # Add support for more platforms with QEMU (optional)
+        # https://github.com/docker/setup-qemu-action
+        name: Set up QEMU
+        if: ${{ env.ENABLE_QEMU == '1' }}
+        uses: docker/setup-qemu-action@v2
+
+      # https://github.com/marketplace/actions/docker-setup-buildx
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: ./Dockerfile
+          platforms: linux/amd64
+          push: false
+          tags: ghusta/postgres-world-db:ci_$(date +%s)
