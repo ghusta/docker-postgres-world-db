@@ -16,6 +16,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: Get current date
+        id: now
+        run: echo "::set-output name=timestamp::$(date +%s)"
+
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -36,4 +41,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: false
-          tags: ghusta/postgres-world-db:ci_$(date +%s)
+          tags: ghusta/postgres-world-db:ci_${{ steps.now.outputs.timestamp }}
