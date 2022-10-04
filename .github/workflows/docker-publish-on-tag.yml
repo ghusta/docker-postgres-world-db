@@ -79,6 +79,5 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
-          body: "TODO: Add description"
           draft: false
           prerelease: false
