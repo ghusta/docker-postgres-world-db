@@ -10,11 +10,8 @@ env:
   ENABLE_QEMU: 1
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
 
       - name: Get current date

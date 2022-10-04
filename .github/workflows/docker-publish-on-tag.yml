@@ -11,9 +11,7 @@ env:
 
 jobs:
   docker-publish:
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -64,9 +62,7 @@ jobs:
 
   create-github-release:
     needs: [ docker-publish ]
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
 
