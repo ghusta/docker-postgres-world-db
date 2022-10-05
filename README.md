@@ -1,6 +1,6 @@
 # postgres-world-db
 
-[![Build Status](https://travis-ci.org/ghusta/docker-postgres-world-db.svg?branch=master)](https://travis-ci.org/ghusta/docker-postgres-world-db)
+[![Build Status](https://github.com/ghusta/docker-postgres-world-db/actions/workflows/docker-image.yml/badge.svg)](https://github.com/ghusta/docker-postgres-world-db/actions/workflows/docker-image.yml)
 [![Docker Pulls](https://img.shields.io/docker/pulls/ghusta/postgres-world-db.svg)](https://hub.docker.com/r/ghusta/postgres-world-db)
 ![GitHub tag](https://img.shields.io/github/tag/ghusta/docker-postgres-world-db.svg)
 
