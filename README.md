@@ -1,7 +1,7 @@
 # postgres-world-db
 
 [![Build Status](https://github.com/ghusta/docker-postgres-world-db/actions/workflows/docker-image.yml/badge.svg)](https://github.com/ghusta/docker-postgres-world-db/actions/workflows/docker-image.yml)
-[![Docker Pulls](https://img.shields.io/docker/pulls/ghusta/postgres-world-db.svg)](https://hub.docker.com/r/ghusta/postgres-world-db)
+[![Docker Pulls](https://img.shields.io/docker/pulls/ghusta/postgres-world-db.svg?logo=docker)](https://hub.docker.com/r/ghusta/postgres-world-db)
 ![GitHub tag](https://img.shields.io/github/tag/ghusta/docker-postgres-world-db.svg)
 
 Example Database for [PostgreSQL](https://www.postgresql.org/) : World DB
