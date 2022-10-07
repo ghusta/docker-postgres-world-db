@@ -53,9 +53,31 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          platforms: linux/amd64,linux/386,linux/arm64,linux/arm/v7
+          platforms: |
+            linux/amd64
+            linux/386
+            linux/arm64
+            linux/arm/v7
           push: true
           tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push Docker image for latest alpine variant
+        id: build-and-push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          build-args: |
+            POSTGRES_TAG=alpine
+          platforms: |
+            linux/amd64
+            linux/386
+            linux/arm64
+            linux/arm/v7
+          push: true
+          tags: alpine
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
