@@ -36,10 +36,25 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64,linux/386,linux/arm64
+          platforms: |
+            linux/amd64
+            linux/386
+            linux/arm64
           push: false
           load: false
           tags: ghusta/postgres-world-db:ci_${{ steps.now.outputs.timestamp }}
+
+      - name: Build image for latest postgres
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: ./Dockerfile
+          build-args: |
+            POSTGRES_TAG=latest
+          platforms: linux/amd64
+          push: false
+          load: false
+          tags: ghusta/postgres-world-db:ci_${{ steps.now.outputs.timestamp }}-latest
 
       # See : https://github.com/djimenezc/docker-multi-arch/commit/abf1ccfc0c37d4b9cbdce5a96b6fb5d48903e6a8
       - name: Load only one architecture
