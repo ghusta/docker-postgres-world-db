@@ -56,6 +56,18 @@ jobs:
           load: false
           tags: ghusta/postgres-world-db:ci_${{ steps.now.outputs.timestamp }}-latest
 
+      - name: Build image for latest alpine
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: ./Dockerfile
+          build-args: |
+            POSTGRES_TAG=alpine
+          platforms: linux/amd64
+          push: false
+          load: false
+          tags: ghusta/postgres-world-db:ci_${{ steps.now.outputs.timestamp }}-alpine
+
       # See : https://github.com/djimenezc/docker-multi-arch/commit/abf1ccfc0c37d4b9cbdce5a96b6fb5d48903e6a8
       - name: Load only one architecture
         uses: docker/build-push-action@v3
