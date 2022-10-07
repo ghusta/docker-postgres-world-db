@@ -52,7 +52,9 @@ jobs:
           file: ./Dockerfile
           build-args: |
             POSTGRES_TAG=latest
-          platforms: linux/amd64
+          platforms: |
+            linux/amd64
+            linux/arm64
           push: false
           load: false
           tags: ghusta/postgres-world-db:ci_${{ steps.now.outputs.timestamp }}-latest
@@ -64,7 +66,9 @@ jobs:
           file: ./Dockerfile
           build-args: |
             POSTGRES_TAG=alpine
-          platforms: linux/amd64
+          platforms: |
+            linux/amd64
+            linux/arm64
           push: false
           load: false
           tags: ghusta/postgres-world-db:ci_${{ steps.now.outputs.timestamp }}-alpine
