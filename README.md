@@ -54,7 +54,9 @@ All settings are documented here : https://www.postgresql.org/docs/current/runti
 
 With Docker, you can run :
 
-`docker exec <my-container-name> cat /var/lib/postgresql/data/postgresql.conf`
+```shell
+docker exec <my-container-name> cat /var/lib/postgresql/data/postgresql.conf
+```
 
 ## Log all statements
 
@@ -74,13 +76,15 @@ See details : https://www.postgresql.org/docs/current/runtime-config-logging.htm
 
 ## With the psql CLI command
 
-`docker exec -it <container_name> psql -d world-db -U world`
+```shell
+docker exec -it <container_name> psql -d world-db -U world
+```
 
 Then try a command, like :
 
 ### List of relations
 
-```
+```PLSQL
 psql (14.2 (Debian 14.2-1.pgdg110+1))
 Type "help" for help.
 
@@ -96,7 +100,7 @@ world-db=# \d
 
 ### List of schemas
 
-```
+```PLSQL
 world-db=# \dn
 List of schemas
   Name  | Owner
@@ -107,14 +111,14 @@ List of schemas
 
 ### Describe the city table
 
-```
+```PLSQL
 world-db=# \d+ city
 ...
 ```
 
 ### A simple query
 
-```
+```PLSQL
 world-db=# select * from city limit 10;
   1 | Kabul          | AFG          | Kabol         |    1780000
   2 | Qandahar       | AFG          | Qandahar      |     237500
