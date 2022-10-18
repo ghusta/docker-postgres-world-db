@@ -56,7 +56,7 @@ jobs:
         with:
           context: .
           build-args: |
-            POSTGRES_TAG=$POSTGRES_VERSION
+            POSTGRES_TAG=${{ env.POSTGRES_VERSION }}
           platforms: |
             linux/amd64
             linux/386
@@ -111,7 +111,7 @@ jobs:
         with:
           context: .
           build-args: |
-            POSTGRES_TAG=${POSTGRES_VERSION}-alpine
+            POSTGRES_TAG=${{ env.POSTGRES_VERSION }}-alpine
           platforms: |
             linux/amd64
             linux/386
