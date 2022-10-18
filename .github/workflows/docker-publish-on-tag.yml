@@ -104,8 +104,11 @@ jobs:
           release_name: ${{ github.ref_name }}
           body: |
             Docker image published:
+            
             ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/${{ env.IMAGE_NAME }}/${{ github.ref_name }}?logo=docker)
+            
             Pull it with:
+            
             ```shell
             docker pull ${{ env.IMAGE_NAME }}:${{ github.ref_name }}
             ```
