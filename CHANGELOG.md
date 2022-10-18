@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.7.0 (2022-10-18)
+Upgrade to PostgreSQL 15.0.  
+See https://www.postgresql.org/about/news/postgresql-15-released-2526/
+
 ## 2.6.5 (2022-08-16)
 Upgrade to PostgreSQL 14.5.  
 See https://www.postgresql.org/about/news/postgresql-145-138-1212-1117-1022-and-15-beta-3-released-2496/
