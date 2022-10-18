@@ -65,7 +65,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Build and push Docker image for latest alpine variant
-        id: build-and-push
+        id: build-and-push-alpine
         uses: docker/build-push-action@v3
         with:
           context: .
