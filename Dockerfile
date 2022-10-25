@@ -8,6 +8,7 @@ ENV POSTGRES_DB world-db
 
 # Copier les scripts SQL dans : 
 ADD scripts/*.sql /docker-entrypoint-initdb.d/
+ADD scripts/*.csv /docker-entrypoint-initdb.d/
 
 # Copier les scripts d'init dans : 
 #ADD scripts/*.sh /docker-entrypoint-initdb.d/
