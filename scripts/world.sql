@@ -14,8 +14,11 @@ CREATE TABLE city (
     name text NOT NULL,
     country_code character(3) NOT NULL,
     district text NOT NULL,
-    population integer NOT NULL
+    population integer NOT NULL,
+    local_name text NULL
 );
+
+COMMENT ON COLUMN city.local_name IS 'City local name';
 
 CREATE TABLE country (
     code character(3) NOT NULL,
@@ -43,7 +46,7 @@ CREATE TABLE country_language (
     percentage real NOT NULL
 );
 
-COPY city (id, name, country_code, district, population)
+COPY city (id, name, country_code, district, population, local_name)
 FROM '/docker-entrypoint-initdb.d/city_utf8.csv'
 DELIMITER ','
 CSV HEADER;
