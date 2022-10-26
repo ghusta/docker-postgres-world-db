@@ -1,8 +1,8 @@
 # Changelog
 
 ## 2.8.0 (2022-10-26)
-- Use CSV for external data files (#18)
-- Add city.local_name column (#19)
+- Use CSV for external data files
+- Add city.local_name column
 
 ## 2.7.0 (2022-10-18)
 Upgrade to PostgreSQL 15.0.  
