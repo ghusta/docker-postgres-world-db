@@ -39,6 +39,9 @@ CREATE TABLE country (
     CONSTRAINT country_continent_check CHECK ((((((((continent = 'Asia'::text) OR (continent = 'Europe'::text)) OR (continent = 'North America'::text)) OR (continent = 'Africa'::text)) OR (continent = 'Oceania'::text)) OR (continent = 'Antarctica'::text)) OR (continent = 'South America'::text)))
 );
 
+COMMENT ON COLUMN country.gnp IS 'GNP is Gross national product';
+COMMENT ON COLUMN country.code2 IS 'Following ISO 3166-1 alpha-2 code';
+
 CREATE TABLE country_language (
     country_code character(3) NOT NULL,
     "language" text NOT NULL,
@@ -91,8 +94,6 @@ ALTER TABLE ONLY country_language
 ALTER TABLE city
     ADD CONSTRAINT country_fk
     FOREIGN KEY (country_code) REFERENCES country (code);
-
-COMMENT ON COLUMN country.gnp IS 'GNP is Gross national product';
 
 COMMIT;
 
