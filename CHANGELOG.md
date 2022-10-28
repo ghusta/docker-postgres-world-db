@@ -1,8 +1,12 @@
 # Changelog
 
+## 2.9.0 (2022-10-28)
+- Add some samples in _city.local_name_ 
+- Fix some data in _city_ for cities in France
+
 ## 2.8.0 (2022-10-26)
 - Use CSV for external data files
-- Add city.local_name column
+- Add _city.local_name_ column
 
 ## 2.7.0 (2022-10-18)
 Upgrade to PostgreSQL 15.0.  
