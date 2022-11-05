@@ -49,31 +49,34 @@ CREATE TABLE country_language (
     percentage real NOT NULL
 );
 
+CREATE TABLE country_flag (
+    code2 character(2) NOT NULL,
+    emoji text NOT NULL,
+    unicode text
+);
+
+COMMENT ON COLUMN country_flag.code2 IS 'Following ISO 3166-1 alpha-2 code';
+COMMENT ON COLUMN country_flag.emoji IS 'Source: Emoji flag symbols (https://apps.timwhitlock.info/emoji/tables/iso3166)';
+
 COPY city (id, name, country_code, district, population, local_name)
 FROM '/docker-entrypoint-initdb.d/city_utf8.csv'
 DELIMITER ','
 CSV HEADER;
-
-
---
--- Data for Name: country; Type: TABLE DATA; Schema: public; Owner: chriskl
---
 
 COPY country (code, name, continent, region, surface_area, indep_year, population, life_expectancy, gnp, gnp_old, local_name, government_form, head_of_state, capital, code2)
 FROM '/docker-entrypoint-initdb.d/country_utf8.csv'
 DELIMITER ','
 CSV HEADER;
 
-
---
--- Data for Name: country_language; Type: TABLE DATA; Schema: public; Owner: chriskl
---
-
 COPY country_language (country_code, "language", is_official, percentage)
 FROM '/docker-entrypoint-initdb.d/country_language_utf8.csv'
 DELIMITER ','
 CSV HEADER;
 
+COPY country_flag (code2, emoji, unicode)
+FROM '/docker-entrypoint-initdb.d/country_flag_utf8.csv'
+DELIMITER ','
+CSV HEADER;
 
 ALTER TABLE ONLY city
     ADD CONSTRAINT city_pkey PRIMARY KEY (id);
@@ -90,6 +93,9 @@ ALTER TABLE ONLY country
 ALTER TABLE ONLY country_language
     ADD CONSTRAINT country_language_country_code_fkey FOREIGN KEY (country_code) REFERENCES country(code);
 
+ALTER TABLE ONLY country_flag
+    ADD CONSTRAINT country_flag_pkey PRIMARY KEY (code2);
+
 -- Added in 2.1
 ALTER TABLE city
     ADD CONSTRAINT country_fk
@@ -100,4 +106,5 @@ COMMIT;
 ANALYZE city;
 ANALYZE country;
 ANALYZE country_language;
+ANALYZE country_flag;
 

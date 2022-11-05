@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.10.0 (2022-11-06)
+- Add table _country_flag_
+
 ## 2.9.0 (2022-10-28)
 - Add some samples in _city.local_name_ 
 - Fix some data in _city_ for cities in France
