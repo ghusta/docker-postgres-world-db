@@ -26,11 +26,12 @@ See also PostgreSQL [Sample Databases](https://wiki.postgresql.org/wiki/Sample_D
 - public
 
 ## Tables
-This database contains 3 tables :
+This database contains 4 tables :
 
 - city
 - country
 - country_language
+- country_flag
 
 ## Relationships
 
@@ -43,7 +44,7 @@ This database contains 3 tables :
 You can run a Docker container with this command (replace _xxxx_ by your local port) :
 
 ```shell
-docker run -d -p xxxx:5432 ghusta/postgres-world-db:2.7
+docker run -d -p xxxx:5432 ghusta/postgres-world-db:2.10
 ```
 
 # PostgreSQL configuration
@@ -85,7 +86,7 @@ Then try a command, like :
 ### List of relations
 
 ```PLSQL
-psql (14.2 (Debian 14.2-1.pgdg110+1))
+psql (15.0 (Debian 15.0-1.pgdg110+1))
 Type "help" for help.
 
 world-db=# \d
@@ -94,8 +95,9 @@ world-db=# \d
 --------+------------------+-------+-------
  public | city             | table | world
  public | country          | table | world
+ public | country_flag     | table | world
  public | country_language | table | world
-(3 rows)
+(4 rows)
 ```
 
 ### List of schemas
