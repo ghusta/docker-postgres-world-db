@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.10.1 (2022-11-11)
+Upgrade to PostgreSQL 15.1.  
+See https://www.postgresql.org/about/news/postgresql-151-146-139-1213-1118-and-1023-released-2543/
+
 ## 2.10.0 (2022-11-06)
 - Add table _country_flag_
 
