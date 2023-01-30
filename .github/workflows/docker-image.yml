@@ -33,7 +33,7 @@ jobs:
 
       # See issue with multi-arch build + load : https://github.com/docker/buildx/issues/59
       - name: Build images (multi-architecture)
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: .
           file: ./Dockerfile
@@ -46,7 +46,7 @@ jobs:
           tags: ghusta/postgres-world-db:ci_${{ steps.now.outputs.timestamp }}
 
       - name: Build image for latest postgres
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: .
           file: ./Dockerfile
@@ -60,7 +60,7 @@ jobs:
           tags: ghusta/postgres-world-db:ci_${{ steps.now.outputs.timestamp }}-latest
 
       - name: Build image for latest alpine
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: .
           file: ./Dockerfile
@@ -75,7 +75,7 @@ jobs:
 
       # See : https://github.com/djimenezc/docker-multi-arch/commit/abf1ccfc0c37d4b9cbdce5a96b6fb5d48903e6a8
       - name: Load only one architecture
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: .
           file: ./Dockerfile
