@@ -64,6 +64,7 @@ jobs:
             linux/arm64/v8
             linux/arm/v7
           push: true
+          provenance: false
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
@@ -83,6 +84,7 @@ jobs:
             linux/arm64/v8
             linux/arm/v7
           push: true
+          provenance: false
           tags: alpine
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
