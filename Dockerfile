@@ -1,5 +1,5 @@
 # Init Example Database World on PostgreSQL
-ARG POSTGRES_TAG=15.2
+ARG POSTGRES_TAG=15.3
 FROM postgres:$POSTGRES_TAG
 
 ENV POSTGRES_USER world
