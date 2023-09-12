@@ -29,7 +29,7 @@ jobs:
 
       # https://github.com/marketplace/actions/docker-setup-buildx
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
 
       # See issue with multi-arch build + load : https://github.com/docker/buildx/issues/59
       - name: Build images (multi-architecture)
