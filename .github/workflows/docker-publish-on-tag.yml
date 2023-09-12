@@ -22,7 +22,7 @@ jobs:
         # https://github.com/marketplace/actions/docker-setup-qemu
         name: Set up QEMU
         if: ${{ env.ENABLE_QEMU == '1' }}
-        uses: docker/setup-qemu-action@v2
+        uses: docker/setup-qemu-action@v3
 
       # https://github.com/marketplace/actions/docker-setup-buildx
       # https://docs.docker.com/build/ci/github-actions/configure-builder/
