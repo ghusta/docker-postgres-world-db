@@ -191,7 +191,7 @@ Then just add JPA entities for each table (City, Country), and interfaces for ea
 
 ## With Python
 
-Install [psycopg](https://pypi.org/project/psycopg/), a PostgreSQL database adapter for Python.
+Install [psycopg 3](https://pypi.org/project/psycopg/), a PostgreSQL database adapter for Python.
 
 > pip install psycopg
 
