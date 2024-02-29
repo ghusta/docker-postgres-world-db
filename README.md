@@ -44,7 +44,7 @@ This database contains 4 tables :
 You can run a Docker container with this command (replace _xxxx_ by your local port) :
 
 ```shell
-docker run -d -p xxxx:5432 ghusta/postgres-world-db:2.10
+docker run -d -p xxxx:5432 ghusta/postgres-world-db:2.11
 ```
 
 # PostgreSQL configuration
