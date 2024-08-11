@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.11.4 (2024-08-11)
+Upgrade to PostgreSQL 16.4.  
+See https://www.postgresql.org/about/news/postgresql-164-158-1413-1316-1220-and-17-beta-3-released-2910/
+
 ## 2.11.3 (2024-05-10)
 Upgrade to PostgreSQL 16.3.  
 See https://www.postgresql.org/about/news/postgresql-163-157-1412-1315-and-1219-released-2858/
