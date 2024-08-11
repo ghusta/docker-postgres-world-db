@@ -2,9 +2,9 @@
 ARG POSTGRES_TAG=16.4
 FROM postgres:$POSTGRES_TAG
 
-ENV POSTGRES_USER world
-ENV POSTGRES_PASSWORD world123
-ENV POSTGRES_DB world-db
+ENV POSTGRES_USER=world
+ENV POSTGRES_PASSWORD=world123
+ENV POSTGRES_DB=world-db
 
 # Copier les scripts SQL dans : 
 ADD scripts/*.sql /docker-entrypoint-initdb.d/
