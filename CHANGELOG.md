@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.12.3 (2025-02-15)
+Upgrade to PostgreSQL 17.3.  
+See https://www.postgresql.org/about/news/postgresql-173-167-1511-1416-and-1319-released-3015/
+
 ## 2.12.2 (2024-11-26)
 Upgrade to PostgreSQL 17.2.  
 See https://www.postgresql.org/about/news/postgresql-172-166-1510-1415-1318-and-1222-released-2965/
