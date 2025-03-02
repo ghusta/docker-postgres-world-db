@@ -8,7 +8,7 @@ on:
 env:
   IMAGE_NAME: ghusta/postgres-world-db
   ENABLE_QEMU: 1
-  POSTGRES_VERSION: 17.3
+  POSTGRES_VERSION: 17.4
   BUILD_PUSH_ALPINE: 0
 
 jobs:
