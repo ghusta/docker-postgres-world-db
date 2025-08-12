@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - # Add support for more platforms with QEMU (optional)
         # https://github.com/marketplace/actions/docker-setup-qemu
@@ -94,7 +94,7 @@ jobs:
     needs: [ docker-publish ]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # https://github.com/actions/create-release
       - name: Create GitHub Release
