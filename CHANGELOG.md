@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.13.0 (2025-09-25)
+Upgrade to PostgreSQL 18.0  .  
+See https://www.postgresql.org/about/news/postgresql-18-released-3142/
+
 ## 2.12.6 (2025-08-15)
 Upgrade to PostgreSQL 17.6.  
 See https://www.postgresql.org/about/news/postgresql-176-1610-1514-1419-1322-and-18-beta-3-released-3118/
