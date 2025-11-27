@@ -20,10 +20,20 @@ CREATE TABLE city (
 
 COMMENT ON COLUMN city.local_name IS 'City local name';
 
+CREATE TYPE continent_enum AS ENUM (
+    'Asia',
+    'Europe',
+    'North America',
+    'Africa',
+    'Oceania',
+    'Antarctica',
+    'South America'
+);
+
 CREATE TABLE country (
     code character(3) NOT NULL,
     name text NOT NULL,
-    continent text NOT NULL,
+    continent continent_enum NOT NULL,
     region text NOT NULL,
     surface_area real NOT NULL,
     indep_year smallint,
@@ -35,8 +45,7 @@ CREATE TABLE country (
     government_form text NOT NULL,
     head_of_state text,
     capital integer,
-    code2 character(2) NOT NULL,
-    CONSTRAINT country_continent_check CHECK ((((((((continent = 'Asia'::text) OR (continent = 'Europe'::text)) OR (continent = 'North America'::text)) OR (continent = 'Africa'::text)) OR (continent = 'Oceania'::text)) OR (continent = 'Antarctica'::text)) OR (continent = 'South America'::text)))
+    code2 character(2) NOT NULL
 );
 
 COMMENT ON COLUMN country.gnp IS 'GNP is Gross national product';
