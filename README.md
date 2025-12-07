@@ -19,7 +19,7 @@ See also PostgreSQL [Sample Databases](https://wiki.postgresql.org/wiki/Sample_D
 
 - database : world-db
 - user : world
-- password : world123
+- password : `<NONE>`
 
 ## Schema
 
