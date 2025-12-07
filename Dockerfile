@@ -3,7 +3,6 @@ ARG POSTGRES_TAG=17.5
 FROM postgres:$POSTGRES_TAG
 
 ENV POSTGRES_USER=world
-ENV POSTGRES_PASSWORD=world123
 ENV POSTGRES_DB=world-db
 
 # Copier les scripts SQL dans : 
