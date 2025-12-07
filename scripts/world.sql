@@ -60,23 +60,35 @@ COMMENT ON COLUMN country_flag.emoji IS 'Source: Emoji flag symbols (https://app
 
 COPY city (id, name, country_code, district, population, local_name)
 FROM '/docker-entrypoint-initdb.d/city_utf8.csv'
-DELIMITER ','
-CSV HEADER;
+WITH (
+    FORMAT csv,
+    HEADER true,
+    DELIMITER ','
+);
 
 COPY country (code, name, continent, region, surface_area, indep_year, population, life_expectancy, gnp, gnp_old, local_name, government_form, head_of_state, capital, code2)
 FROM '/docker-entrypoint-initdb.d/country_utf8.csv'
-DELIMITER ','
-CSV HEADER;
+WITH (
+    FORMAT csv,
+    HEADER true,
+    DELIMITER ','
+);
 
 COPY country_language (country_code, "language", is_official, percentage)
 FROM '/docker-entrypoint-initdb.d/country_language_utf8.csv'
-DELIMITER ','
-CSV HEADER;
+WITH (
+    FORMAT csv,
+    HEADER true,
+    DELIMITER ','
+);
 
 COPY country_flag (code2, emoji, unicode)
 FROM '/docker-entrypoint-initdb.d/country_flag_utf8.csv'
-DELIMITER ','
-CSV HEADER;
+WITH (
+    FORMAT csv,
+    HEADER true,
+    DELIMITER ','
+);
 
 ALTER TABLE ONLY city
     ADD CONSTRAINT city_pkey PRIMARY KEY (id);
