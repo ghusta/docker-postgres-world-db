@@ -16,4 +16,6 @@ COPY scripts/*.csv /docker-entrypoint-initdb.d/
 COPY docker-healthcheck /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-healthcheck
 
+USER postgres
+
 HEALTHCHECK CMD ["docker-healthcheck"]
