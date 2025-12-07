@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.14.0 (2025-12-07)
+
+- Use identity column for table city
+- Add type continent_enum
+- Use non-root user
+- Externalize sensitive data (ENV "POSTGRES_PASSWORD")
+
 ## 2.13.1 (2025-11-14)
 Upgrade to PostgreSQL 18.1.  
 See https://www.postgresql.org/about/news/postgresql-181-177-1611-1515-1420-and-1323-released-3171/
