@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.14.1 (2026-02-15)
+Upgrade to PostgreSQL 18.2.  
+See https://www.postgresql.org/about/news/postgresql-182-178-1612-1516-and-1421-released-3235/
+
 ## 2.14.0 (2025-12-07)
 
 - Use identity column for table city
