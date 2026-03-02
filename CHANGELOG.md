@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.14.2 (2026-03-02)
+Upgrade to PostgreSQL 18.3.  
+See https://www.postgresql.org/about/news/postgresql-183-179-1613-1517-and-1422-released-3246/
+
 ## 2.14.1 (2026-02-15)
 Upgrade to PostgreSQL 18.2.  
 See https://www.postgresql.org/about/news/postgresql-182-178-1612-1516-and-1421-released-3235/
