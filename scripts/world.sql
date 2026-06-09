@@ -119,6 +119,9 @@ ALTER TABLE city
     ADD CONSTRAINT country_fk
     FOREIGN KEY (country_code) REFERENCES country (code);
 
+-- Added in 2.15
+CREATE INDEX city_name_idx ON city (name);
+
 COMMIT;
 
 ANALYZE city;
