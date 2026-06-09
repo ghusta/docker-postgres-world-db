@@ -14,7 +14,7 @@ CREATE TABLE city (
     name text NOT NULL,
     country_code character(3) NOT NULL,
     district text NOT NULL,
-    population integer NOT NULL,
+    population bigint NOT NULL,
     local_name text NULL
 );
 
