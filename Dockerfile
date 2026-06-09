@@ -1,6 +1,6 @@
 # Init Example Database World on PostgreSQL
 ARG POSTGRES_TAG=18.4
-FROM dhi.io/postgres:$POSTGRES_TAG
+FROM postgres:$POSTGRES_TAG
 
 ENV POSTGRES_USER=world
 ENV POSTGRES_DB=world-db
