@@ -37,7 +37,7 @@ CREATE TABLE country (
     region text NOT NULL,
     surface_area real NOT NULL,
     indep_year smallint,
-    population integer NOT NULL,
+    population bigint NOT NULL,
     life_expectancy real,
     gnp numeric(10,2),
     gnp_old numeric(10,2),
