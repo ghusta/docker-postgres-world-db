@@ -121,6 +121,7 @@ ALTER TABLE city
 
 -- Added in 2.15
 CREATE INDEX city_name_idx ON city (name);
+CREATE INDEX country_name_idx ON country (name);
 
 COMMIT;
 
