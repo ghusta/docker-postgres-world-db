@@ -86,18 +86,19 @@ Then try a command, like :
 ### List of relations
 
 ```PLSQL
-psql (15.0 (Debian 15.0-1.pgdg110+1))
+psql (18.4 (Debian 18.4-1.pgdg13+1))
 Type "help" for help.
 
 world-db=# \d
-             List of relations
- Schema |       Name       | Type  | Owner
---------+------------------+-------+-------
- public | city             | table | world
- public | country          | table | world
- public | country_flag     | table | world
- public | country_language | table | world
-(4 rows)
+              List of relations
+ Schema |       Name       |   Type   | Owner 
+--------+------------------+----------+-------
+ public | city             | table    | world
+ public | city_id_seq      | sequence | world
+ public | country          | table    | world
+ public | country_flag     | table    | world
+ public | country_language | table    | world
+(5 rows)
 ```
 
 ### List of schemas
