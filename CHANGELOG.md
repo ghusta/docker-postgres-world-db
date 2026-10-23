@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.16.0
+## 2.16.0 (2026-10-23)
 Produce alpine variants.  
 
 ## 2.15.1 (2026-08-24)
