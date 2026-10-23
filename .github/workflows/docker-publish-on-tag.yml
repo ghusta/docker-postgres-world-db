@@ -125,5 +125,8 @@ jobs:
             ```shell
             docker pull ${{ env.IMAGE_NAME }}:${{ github.ref_name }}
             ```
+            ```shell
+            docker pull ${{ env.IMAGE_NAME }}:${{ github.ref_name }}-alpine
+            ```
           draft: false
           prerelease: false
