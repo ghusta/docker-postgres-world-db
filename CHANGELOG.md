@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.16.0
+Produce alpine variants.  
+
 ## 2.15.1 (2026-08-24)
 Upgrade to PostgreSQL 18.6.  
 See https://www.postgresql.org/about/news/postgresql-186-1711-1615-1519-1424-and-19-beta-3-released-3365/

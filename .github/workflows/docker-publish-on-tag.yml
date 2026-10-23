@@ -9,7 +9,7 @@ env:
   IMAGE_NAME: ghusta/postgres-world-db
   ENABLE_QEMU: 1
   POSTGRES_VERSION: 18.6
-  BUILD_PUSH_ALPINE: 0
+  BUILD_PUSH_ALPINE: 1
 
 jobs:
   docker-publish:
