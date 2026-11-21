@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.17.0 (2026-11-21)
+Upgrade to PostgreSQL 19.0.  
+See https://www.postgresql.org/about/news/postgresql-19-released-3449/
+
 ## 2.16.1 (2026-11-12)
 Upgrade to PostgreSQL 18.7.  
 See https://www.postgresql.org/about/news/postgresql-187-1712-1616-1520-1425-and-19-rc-2-released-3442/
